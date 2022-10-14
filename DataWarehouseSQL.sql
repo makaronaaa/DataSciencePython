@@ -24,7 +24,7 @@ select us_state_terr
   group by us_state_terr having sum(own_computer)=0
 
 
--- 3.With one query, show each state’s aggregates (result should have four columns and one row for each state).  --Use a CUBE to show 
+-- 3.With one query, show each stateâ€™s aggregates (result should have four columns and one row for each state).  --Use a CUBE to show 
 --subtotals by education level for each state (each state will be grouped together).
 --a.	People responding
 --b.	Number of people who own computer 
@@ -43,7 +43,7 @@ group by
 rollup(us_state_terr, education_level_achieved)
 order by us_state_terr desc
 
---4.Use the query above to show each state’s rank for (result should have four columns and one row for each state). 
+--4.Use the query above to show each stateâ€™s rank for (result should have four columns and one row for each state). 
 --Order the result by the ranking of your choice.  There is no need to CUBE the results
 --a.	People responding
 --b.	Number of people who own computer
@@ -64,7 +64,7 @@ order by RANK_avg_income desc
 
 --5.We want to look at statistics of states where there is at least one person using a computer.  Using a single query select from the additional_person_info view: For each state, give the following summary information (result should have seven columns and one row for each state).  
 --a.	Number of people reported
---b.	Number of people who use the internet – Hint:  review distinct values here, there will be a bit of transformation that you will need to do, look at case statements
+--b.	Number of people who use the internet â€“ Hint:  review distinct values here, there will be a bit of transformation that you will need to do, look at case statements
 --c.    Number of people who own a personal computer
 --d.	Highest income (format as currency) 
 --e.	Average income (format as currency)
